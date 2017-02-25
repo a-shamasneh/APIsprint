@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
 
-var bookSchema = new mongoose.Schema({
-	
+var music = new mongoose.Schema({
+	m_name:String,
+    m_detail:String,
+    m_date: {type:Date,default:Date.now}
 });
 
-var book = mongoose.model('book', bookSchema);
+var Music = mongoose.model('music', music);
 
-module.exports = book; 
+module.exports = Music; 
